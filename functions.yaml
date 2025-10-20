@@ -38,7 +38,7 @@
 
   - name: convert yaml to json
     ansible.builtin.copy:
-       dest; ./student-data.json
+       dest: ./student-data.json
        src: "{{ student_details | to_json }}"
 
  
