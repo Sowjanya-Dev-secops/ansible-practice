@@ -4,9 +4,14 @@
   vars: 
    technologies: java, devops, sql, python
    tags:
-     application: roboshop
-     environment: dev
+      application: roboshop
+      environment: dev
 
+   listtags:
+     - key: application
+       value: roboshop
+     - key: environment
+       value: dev
   tasks:
   - name: strings to list
     # ansible.builtin.debug:
@@ -16,4 +21,7 @@
   - name: tags to list
     ansible.builtin.debug:
      msg: "tags are: {{ tags | dict2items }}"
+  - name: tags to list
+    ansible.builtin.debug:
+     msg: "tags are: {{ listtags | items2dict }}"
  
