@@ -1,6 +1,6 @@
 - name: functions and covert sting to list
   hosts: local
-  # connection: local
+  connection: local
   vars: 
    technologies: java, devops, sql, python
 
