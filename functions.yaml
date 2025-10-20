@@ -41,4 +41,8 @@
        dest: ./student-data.json
        content: "{{ student_details | to_nice_json }}"
 
+  - name: conver lower to upper
+    ansible.builtin.debug:
+      msg: "{{ "lower" | upper }}"
+
  
