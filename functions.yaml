@@ -27,4 +27,13 @@
   - name: tags to list
     ansible.builtin.debug:
       msg: "tags are: {{ listtags | items2dict }}"
+
+  - name: copy a file content into variable 
+    ansible.builtin.set_facts:
+      student_details: "{{ lookup('file','student.yaml') | from_yaml }}"
+  
+  - name: convert yaml to json
+    ansible.builtin.debug:
+       msg: "{{ student_details | to_json }}"
+
  
