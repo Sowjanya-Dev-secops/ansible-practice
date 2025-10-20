@@ -1,0 +1,19 @@
+<students>
+     <student>
+       <name> sowjanya</name>
+       <dob>20-12-1990</dob>
+       <address>
+          <doorno>190</doorno>
+       </address>
+     </student>
+
+      <student>
+       <name> sowjanya vardhan</name>
+       <dob>20-12-1990</dob>
+       <address>
+          <doorno>190</doorno>
+       </address>
+     </student>
+
+
+</students>

@@ -13,6 +13,9 @@
      - key: environment
        value: dev
   tasks:
+  - name: default variable
+    ansible.builtin.debug:
+     msg: "{{ name | default('sowji')}}"
   - name: strings to list
     # ansible.builtin.debug:
     #  masg: "technologies are:{{ technologies | spilt(',') }} "
@@ -20,8 +23,8 @@
         msg: "{{ technologies | split(',') }}"
   - name: tags to list
     ansible.builtin.debug:
-     msg: "tags are: {{ tags | dict2items }}"
+      msg: "tags are: {{ tags | dict2items }}"
   - name: tags to list
     ansible.builtin.debug:
-     msg: "tags are: {{ listtags | items2dict }}"
+      msg: "tags are: {{ listtags | items2dict }}"
  
