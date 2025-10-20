@@ -3,6 +3,7 @@
   connection: local
   vars: 
    technologies: java, devops, sql, python
+   demo: lower
    tags:
       application: roboshop
       environment: dev
@@ -43,6 +44,6 @@
 
   - name: conver lower to upper
     ansible.builtin.debug:
-      msg: "{{ "lower" | upper }}"
+      msg: "{{ demo | upper }}"
 
  
