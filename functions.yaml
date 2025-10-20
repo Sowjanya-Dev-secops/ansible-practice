@@ -3,6 +3,9 @@
   connection: local
   vars: 
    technologies: java, devops, sql, python
+   tags:
+     application: roboshop
+     environment: dev
 
   tasks:
   - name: strings to list
@@ -10,4 +13,7 @@
     #  masg: "technologies are:{{ technologies | spilt(',') }} "
     ansible.builtin.debug:
         msg: "{{ technologies | split(',') }}"
+  - name: tags to list
+    ansible.builtin.debug:
+     msg: "tags are: {{ tags | dict2items }}"
  
